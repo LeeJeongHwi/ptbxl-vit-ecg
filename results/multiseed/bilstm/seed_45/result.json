@@ -1,0 +1,132 @@
+{
+  "name": "bilstm",
+  "display_name": "BiLSTM",
+  "seed": 45,
+  "config": {
+    "registry": "bilstm"
+  },
+  "protocol": {
+    "epochs": 70,
+    "patience": 10,
+    "batch_size": 16,
+    "eval_batch_size": 32,
+    "lr": 0.0001,
+    "weight_decay": 0.05,
+    "num_thresholds": 50,
+    "loss": "AsymmetricLoss() defaults from ptbxl.model.vit (gamma_neg 2, gamma_pos 0, clip 0.05)",
+    "scheduler": "CosineAnnealingLR(T_max=epochs, eta_min=1e-6)",
+    "early_stopping": "validation loss, strict improvement"
+  },
+  "trainable_params": 723141,
+  "training_time_min": 3.2322983940442405,
+  "best_epoch": 15,
+  "best_val_loss": 0.14570607897921412,
+  "best_threshold_on_validation": 0.7142857142857142,
+  "validation_emr_at_best_threshold": 0.6337371854613234,
+  "validation_hamming_at_best_threshold": 0.11314072693383039,
+  "test_metrics_at_best_threshold": {
+    "threshold": 0.7142857142857142,
+    "exact_match_ratio": 0.6385542168674698,
+    "hamming_loss": 0.11251158480074143,
+    "per_class": [
+      {
+        "accuracy": 0.8674698795180723,
+        "precision": 0.8063348416289593,
+        "recall": 0.9252336448598131,
+        "f1": 0.8617021276595744,
+        "label": "NORM"
+      },
+      {
+        "accuracy": 0.866079703429101,
+        "precision": 0.7806451612903226,
+        "recall": 0.66,
+        "f1": 0.7152709359605912,
+        "label": "MI"
+      },
+      {
+        "accuracy": 0.8952734012974977,
+        "precision": 0.8172043010752689,
+        "recall": 0.7293666026871402,
+        "f1": 0.77079107505071,
+        "label": "STTC"
+      },
+      {
+        "accuracy": 0.8929564411492122,
+        "precision": 0.8320802005012531,
+        "recall": 0.6693548387096774,
+        "f1": 0.7418994413407822,
+        "label": "CD"
+      },
+      {
+        "accuracy": 0.9156626506024096,
+        "precision": 0.7631578947368421,
+        "recall": 0.44274809160305345,
+        "f1": 0.5603864734299517,
+        "label": "HYP"
+      }
+    ],
+    "confusion_matrix": [
+      [
+        [
+          981,
+          214
+        ],
+        [
+          72,
+          891
+        ]
+      ],
+      [
+        [
+          1506,
+          102
+        ],
+        [
+          187,
+          363
+        ]
+      ],
+      [
+        [
+          1552,
+          85
+        ],
+        [
+          141,
+          380
+        ]
+      ],
+      [
+        [
+          1595,
+          67
+        ],
+        [
+          164,
+          332
+        ]
+      ],
+      [
+        [
+          1860,
+          36
+        ],
+        [
+          146,
+          116
+        ]
+      ]
+    ]
+  },
+  "meta": {
+    "git": "25a6465",
+    "torch": "2.1.0+cu121",
+    "device": "cuda",
+    "strict_deterministic": false,
+    "smoke_test": false,
+    "n_train": 17084,
+    "n_val": 2146,
+    "n_test": 2158,
+    "finished_at": "2026-10-12 15:34:33"
+  }
+}

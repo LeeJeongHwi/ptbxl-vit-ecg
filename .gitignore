@@ -1,0 +1,27 @@
+# data and caches
+ptb_xl_dataset/
+npy_data/
+# checkpoints and run outputs
+models/
+outputs/
+*.pth
+*.pt
+runs.log
+results/*_smoke/
+# figures produced by the scripts
+*.png
+*.pdf
+!docs/*.png
+# python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+# editors / OS
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

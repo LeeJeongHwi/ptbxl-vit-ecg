@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+type: software
+title: "ptbxl-vit-ecg: Explainable Vision Transformer for multi-label 12-lead ECG classification"
+version: 1.0.0
+date-released: 2026-10-27
+license: MIT
+repository-code: "https://github.com/<account>/ptbxl-vit-ecg"
+authors:
+  - family-names: Oh
+    given-names: SeungJun
+    affiliation: "Department of Sports ICT Convergence, Sangmyung University, Seoul, Republic of Korea"
+  - family-names: Lee
+    given-names: JeongHwi
+    affiliation: "Department of Artificial Intelligence and Informatics, Sangmyung University, Seoul, Republic of Korea"
+  - family-names: Kim
+    given-names: Dong-Keun
+    affiliation: "Department of Human-Centered Artificial Intelligence, Sangmyung University, Seoul, Republic of Korea"
+keywords:
+  - electrocardiogram
+  - PTB-XL
+  - Vision Transformer
+  - multi-label classification
+  - attention visualization
+preferred-citation:
+  type: article
+  title: "Explainable Vision Transformer for Multi-Label 12-Lead ECG Classification"
+  authors:
+    - family-names: Oh
+      given-names: SeungJun
+    - family-names: Lee
+      given-names: JeongHwi
+    - family-names: Kim
+      given-names: Dong-Keun
+  journal: "Scientific Reports"
+  year: 2026
+  notes: "under review"

@@ -1,0 +1,85 @@
+model,display_name,metric,n,mean,std,min,max
+vit_depth6,Proposed ViT (depth = 6),val_emr,5,0.611090,0.005964,0.602982,0.616962
+vit_depth6,Proposed ViT (depth = 6),test_emr,5,0.600093,0.008944,0.588044,0.609824
+vit_depth6,Proposed ViT (depth = 6),test_hamming,5,0.127247,0.001144,0.125857,0.128545
+vit_depth6,Proposed ViT (depth = 6),f1_NORM,5,0.840114,0.005813,0.832836,0.846380
+vit_depth6,Proposed ViT (depth = 6),precision_NORM,5,0.800488,0.008723,0.786751,0.808531
+vit_depth6,Proposed ViT (depth = 6),recall_NORM,5,0.884112,0.015639,0.867082,0.900312
+vit_depth6,Proposed ViT (depth = 6),f1_MI,5,0.696031,0.012614,0.679089,0.707547
+vit_depth6,Proposed ViT (depth = 6),precision_MI,5,0.749935,0.021901,0.735294,0.788462
+vit_depth6,Proposed ViT (depth = 6),recall_MI,5,0.650909,0.034233,0.596364,0.681818
+vit_depth6,Proposed ViT (depth = 6),f1_STTC,5,0.737835,0.004562,0.731417,0.743914
+vit_depth6,Proposed ViT (depth = 6),precision_STTC,5,0.744121,0.012766,0.724584,0.756148
+vit_depth6,Proposed ViT (depth = 6),recall_STTC,5,0.732054,0.015746,0.708253,0.752399
+vit_depth6,Proposed ViT (depth = 6),f1_CD,5,0.690832,0.009353,0.677925,0.701595
+vit_depth6,Proposed ViT (depth = 6),precision_CD,5,0.815066,0.033726,0.761337,0.843844
+vit_depth6,Proposed ViT (depth = 6),recall_CD,5,0.601210,0.031149,0.566532,0.643145
+vit_depth6,Proposed ViT (depth = 6),f1_HYP,5,0.537998,0.047192,0.470588,0.574713
+vit_depth6,Proposed ViT (depth = 6),precision_HYP,5,0.691244,0.052180,0.598291,0.722543
+vit_depth6,Proposed ViT (depth = 6),recall_HYP,5,0.447328,0.073784,0.351145,0.534351
+vit_depth6,Proposed ViT (depth = 6),best_thr,5,0.722449,0.011178,0.714286,0.734694
+vit_depth6,Proposed ViT (depth = 6),best_epoch,5,14.600000,2.073644,12.000000,17.000000
+vit_depth6,Proposed ViT (depth = 6),best_val_loss,5,0.162255,0.002134,0.160073,0.165108
+resnet1d,ResNet1D,val_emr,5,0.634203,0.005678,0.627679,0.641193
+resnet1d,ResNet1D,test_emr,5,0.634847,0.008354,0.623262,0.645968
+resnet1d,ResNet1D,test_hamming,5,0.111121,0.002141,0.109082,0.113438
+resnet1d,ResNet1D,f1_NORM,5,0.865209,0.003143,0.860915,0.868836
+resnet1d,ResNet1D,precision_NORM,5,0.812797,0.017470,0.788428,0.827230
+resnet1d,ResNet1D,recall_NORM,5,0.925441,0.016127,0.910696,0.948079
+resnet1d,ResNet1D,f1_MI,5,0.732497,0.003468,0.730093,0.738519
+resnet1d,ResNet1D,precision_MI,5,0.802870,0.030096,0.762089,0.846523
+resnet1d,ResNet1D,recall_MI,5,0.674909,0.026672,0.641818,0.716364
+resnet1d,ResNet1D,f1_STTC,5,0.761318,0.013377,0.741935,0.773832
+resnet1d,ResNet1D,precision_STTC,5,0.790587,0.036970,0.754098,0.843521
+resnet1d,ResNet1D,recall_STTC,5,0.738196,0.053770,0.662188,0.794626
+resnet1d,ResNet1D,f1_CD,5,0.746538,0.014016,0.728950,0.760085
+resnet1d,ResNet1D,precision_CD,5,0.833126,0.020003,0.802691,0.851752
+resnet1d,ResNet1D,recall_CD,5,0.677419,0.032665,0.637097,0.721774
+resnet1d,ResNet1D,f1_HYP,5,0.553676,0.045359,0.483696,0.594235
+resnet1d,ResNet1D,precision_HYP,5,0.779215,0.053701,0.708995,0.839623
+resnet1d,ResNet1D,recall_HYP,5,0.435878,0.069671,0.339695,0.511450
+resnet1d,ResNet1D,best_thr,5,0.714286,0.032268,0.673469,0.755102
+resnet1d,ResNet1D,best_epoch,5,9.200000,1.788854,7.000000,11.000000
+resnet1d,ResNet1D,best_val_loss,5,0.143699,0.002688,0.141627,0.147797
+bilstm,BiLSTM,val_emr,5,0.632432,0.004547,0.625815,0.637931
+bilstm,BiLSTM,test_emr,5,0.634198,0.005728,0.625579,0.639944
+bilstm,BiLSTM,test_hamming,5,0.112790,0.001091,0.111585,0.114458
+bilstm,BiLSTM,f1_NORM,5,0.863058,0.004001,0.859259,0.868331
+bilstm,BiLSTM,precision_NORM,5,0.814783,0.009760,0.802480,0.824595
+bilstm,BiLSTM,recall_NORM,5,0.917757,0.017211,0.898235,0.940810
+bilstm,BiLSTM,f1_MI,5,0.719986,0.006813,0.713427,0.730769
+bilstm,BiLSTM,precision_MI,5,0.776922,0.019483,0.744681,0.794643
+bilstm,BiLSTM,recall_MI,5,0.671636,0.022585,0.647273,0.700000
+bilstm,BiLSTM,f1_STTC,5,0.770280,0.007761,0.760761,0.782178
+bilstm,BiLSTM,precision_STTC,5,0.804532,0.009368,0.794979,0.817204
+bilstm,BiLSTM,recall_STTC,5,0.738964,0.012947,0.729367,0.758157
+bilstm,BiLSTM,f1_CD,5,0.729684,0.018658,0.707317,0.752412
+bilstm,BiLSTM,precision_CD,5,0.853817,0.046004,0.803204,0.909657
+bilstm,BiLSTM,recall_CD,5,0.641129,0.053285,0.584677,0.707661
+bilstm,BiLSTM,f1_HYP,5,0.541807,0.041724,0.467742,0.568720
+bilstm,BiLSTM,precision_HYP,5,0.769356,0.022027,0.748387,0.794326
+bilstm,BiLSTM,recall_HYP,5,0.420611,0.050664,0.332061,0.458015
+bilstm,BiLSTM,best_thr,5,0.714286,0.014431,0.693878,0.734694
+bilstm,BiLSTM,best_epoch,5,17.600000,3.286335,15.000000,23.000000
+bilstm,BiLSTM,best_val_loss,5,0.147311,0.001501,0.145653,0.148657
+inceptiontime,InceptionTime,val_emr,5,0.629077,0.004831,0.623020,0.636067
+inceptiontime,InceptionTime,test_emr,5,0.625857,0.006342,0.617702,0.634384
+inceptiontime,InceptionTime,test_hamming,5,0.113550,0.002009,0.111214,0.115107
+inceptiontime,InceptionTime,f1_NORM,5,0.860785,0.003873,0.856875,0.865999
+inceptiontime,InceptionTime,precision_NORM,5,0.795079,0.010669,0.781678,0.809827
+inceptiontime,InceptionTime,recall_NORM,5,0.938525,0.009005,0.924195,0.948079
+inceptiontime,InceptionTime,f1_MI,5,0.729685,0.018559,0.702760,0.749758
+inceptiontime,InceptionTime,precision_MI,5,0.802290,0.032059,0.755769,0.844388
+inceptiontime,InceptionTime,recall_MI,5,0.672000,0.047405,0.601818,0.714545
+inceptiontime,InceptionTime,f1_STTC,5,0.768135,0.006302,0.759959,0.772901
+inceptiontime,InceptionTime,precision_STTC,5,0.795843,0.017277,0.768501,0.812227
+inceptiontime,InceptionTime,recall_STTC,5,0.743186,0.025658,0.714012,0.777351
+inceptiontime,InceptionTime,f1_CD,5,0.723276,0.012654,0.700980,0.731765
+inceptiontime,InceptionTime,precision_CD,5,0.870952,0.023231,0.834197,0.893750
+inceptiontime,InceptionTime,recall_CD,5,0.619355,0.026648,0.576613,0.649194
+inceptiontime,InceptionTime,f1_HYP,5,0.510547,0.037590,0.478261,0.569444
+inceptiontime,InceptionTime,precision_HYP,5,0.776443,0.041648,0.723529,0.830189
+inceptiontime,InceptionTime,recall_HYP,5,0.383969,0.054153,0.335878,0.469466
+inceptiontime,InceptionTime,best_thr,5,0.730612,0.017075,0.714286,0.755102
+inceptiontime,InceptionTime,best_epoch,5,15.400000,5.319774,9.000000,22.000000
+inceptiontime,InceptionTime,best_val_loss,5,0.146859,0.001295,0.145587,0.148339

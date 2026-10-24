@@ -1,0 +1,136 @@
+{
+  "name": "vit_depth6",
+  "display_name": "Proposed ViT (depth = 6)",
+  "seed": 46,
+  "config": {
+    "patch": 20,
+    "depth": 6,
+    "heads": 4,
+    "embed": 256,
+    "mlp": 512
+  },
+  "protocol": {
+    "epochs": 70,
+    "patience": 10,
+    "batch_size": 16,
+    "eval_batch_size": 32,
+    "lr": 0.0001,
+    "weight_decay": 0.05,
+    "num_thresholds": 50,
+    "loss": "AsymmetricLoss() defaults from ptbxl.model.vit (gamma_neg 2, gamma_pos 0, clip 0.05)",
+    "scheduler": "CosineAnnealingLR(T_max=epochs, eta_min=1e-6)",
+    "early_stopping": "validation loss, strict improvement"
+  },
+  "trainable_params": 3290629,
+  "training_time_min": 6.109690511226654,
+  "best_epoch": 16,
+  "best_val_loss": 0.1651080225881956,
+  "best_threshold_on_validation": 0.7142857142857142,
+  "validation_emr_at_best_threshold": 0.6067101584342963,
+  "validation_hamming_at_best_threshold": 0.12311276794035415,
+  "test_metrics_at_best_threshold": {
+    "threshold": 0.7142857142857142,
+    "exact_match_ratio": 0.6010194624652456,
+    "hamming_loss": 0.12706209453197406,
+    "per_class": [
+      {
+        "accuracy": 0.8443002780352178,
+        "precision": 0.7994269340974212,
+        "recall": 0.8691588785046729,
+        "f1": 0.8328358208955223,
+        "label": "NORM"
+      },
+      {
+        "accuracy": 0.8563484708063022,
+        "precision": 0.7352941176470589,
+        "recall": 0.6818181818181818,
+        "f1": 0.7075471698113208,
+        "label": "MI"
+      },
+      {
+        "accuracy": 0.871177015755329,
+        "precision": 0.7245841035120147,
+        "recall": 0.7523992322456814,
+        "f1": 0.7382297551789078,
+        "label": "STTC"
+      },
+      {
+        "accuracy": 0.8785912882298424,
+        "precision": 0.806282722513089,
+        "recall": 0.6209677419354839,
+        "f1": 0.7015945330296127,
+        "label": "CD"
+      },
+      {
+        "accuracy": 0.9142724745134384,
+        "precision": 0.7225433526011561,
+        "recall": 0.4770992366412214,
+        "f1": 0.574712643678161,
+        "label": "HYP"
+      }
+    ],
+    "confusion_matrix": [
+      [
+        [
+          985,
+          210
+        ],
+        [
+          126,
+          837
+        ]
+      ],
+      [
+        [
+          1473,
+          135
+        ],
+        [
+          175,
+          375
+        ]
+      ],
+      [
+        [
+          1488,
+          149
+        ],
+        [
+          129,
+          392
+        ]
+      ],
+      [
+        [
+          1588,
+          74
+        ],
+        [
+          188,
+          308
+        ]
+      ],
+      [
+        [
+          1848,
+          48
+        ],
+        [
+          137,
+          125
+        ]
+      ]
+    ]
+  },
+  "meta": {
+    "git": "25a6465",
+    "torch": "2.1.0+cu121",
+    "device": "cuda",
+    "strict_deterministic": false,
+    "smoke_test": false,
+    "n_train": 17084,
+    "n_val": 2146,
+    "n_test": 2158,
+    "finished_at": "2026-10-12 15:54:03"
+  }
+}

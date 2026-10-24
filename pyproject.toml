@@ -1,0 +1,51 @@
+[project]
+name = "ptbxl-vit"
+version = "0.1.0"
+description = "Explainable Vision Transformer for multi-label 12-lead ECG classification on PTB-XL"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    # versions used for the reported experiments
+    "torch==2.1.0",
+    "scikit-learn==1.3.2",
+    "numpy==1.26.0",
+    "pandas==2.1.3",
+    "einops==0.7.0",
+    "scipy==1.11.4",
+    "seaborn==0.13.0",
+    "ecg-plot==0.2.8",
+    "pytorch-model-summary==0.1.2",
+    # data loading and plotting
+    "wfdb>=4.0",
+    "matplotlib>=3.7",
+    "tqdm>=4.65",
+]
+[project.optional-dependencies]
+wavelet = [
+    "PyWavelets>=1.4",
+]
+dev = [
+    "pytest>=7.0",
+    "PyWavelets>=1.4",
+]
+[project.scripts]
+ptbxl = "ptbxl.cli:main"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[tool.hatch.build.targets.wheel]
+packages = ["ptbxl"]
+
+# PyTorch with CUDA 12.1 (the build used for the experiments); replace the index
+# with https://download.pytorch.org/whl/cpu for a CPU-only installation.
+[tool.uv.sources]
+torch = { index = "pytorch-cu121" }
+
+[[tool.uv.index]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
+# triton (a dependency of the Linux CUDA wheels) is not available on Windows
+[tool.uv]
+override-dependencies = ["triton ; sys_platform == 'never'"]

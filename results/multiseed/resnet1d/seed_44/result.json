@@ -1,0 +1,132 @@
+{
+  "name": "resnet1d",
+  "display_name": "ResNet1D",
+  "seed": 44,
+  "config": {
+    "registry": "resnet1d"
+  },
+  "protocol": {
+    "epochs": 70,
+    "patience": 10,
+    "batch_size": 16,
+    "eval_batch_size": 32,
+    "lr": 0.0001,
+    "weight_decay": 0.05,
+    "num_thresholds": 50,
+    "loss": "AsymmetricLoss() defaults from ptbxl.model.vit (gamma_neg 2, gamma_pos 0, clip 0.05)",
+    "scheduler": "CosineAnnealingLR(T_max=epochs, eta_min=1e-6)",
+    "early_stopping": "validation loss, strict improvement"
+  },
+  "trainable_params": 8739973,
+  "training_time_min": 3.8141466617584228,
+  "best_epoch": 11,
+  "best_val_loss": 0.14162683761884076,
+  "best_threshold_on_validation": 0.7142857142857142,
+  "validation_emr_at_best_threshold": 0.6290773532152842,
+  "validation_hamming_at_best_threshold": 0.11220876048462256,
+  "test_metrics_at_best_threshold": {
+    "threshold": 0.7142857142857142,
+    "exact_match_ratio": 0.6380908248378128,
+    "hamming_loss": 0.11047265987025023,
+    "per_class": [
+      {
+        "accuracy": 0.8767377201112141,
+        "precision": 0.8272300469483568,
+        "recall": 0.9148494288681205,
+        "f1": 0.8688362919132149,
+        "label": "NORM"
+      },
+      {
+        "accuracy": 0.8744207599629287,
+        "precision": 0.803921568627451,
+        "recall": 0.6709090909090909,
+        "f1": 0.7314172447968286,
+        "label": "MI"
+      },
+      {
+        "accuracy": 0.8878591288229842,
+        "precision": 0.7540983606557377,
+        "recall": 0.7946257197696737,
+        "f1": 0.7738317757009345,
+        "label": "STTC"
+      },
+      {
+        "accuracy": 0.8911028730305839,
+        "precision": 0.8354755784061697,
+        "recall": 0.655241935483871,
+        "f1": 0.7344632768361582,
+        "label": "CD"
+      },
+      {
+        "accuracy": 0.917516218721038,
+        "precision": 0.8088235294117647,
+        "recall": 0.4198473282442748,
+        "f1": 0.5527638190954773,
+        "label": "HYP"
+      }
+    ],
+    "confusion_matrix": [
+      [
+        [
+          1011,
+          184
+        ],
+        [
+          82,
+          881
+        ]
+      ],
+      [
+        [
+          1518,
+          90
+        ],
+        [
+          181,
+          369
+        ]
+      ],
+      [
+        [
+          1502,
+          135
+        ],
+        [
+          107,
+          414
+        ]
+      ],
+      [
+        [
+          1598,
+          64
+        ],
+        [
+          171,
+          325
+        ]
+      ],
+      [
+        [
+          1870,
+          26
+        ],
+        [
+          152,
+          110
+        ]
+      ]
+    ]
+  },
+  "meta": {
+    "git": "25a6465",
+    "torch": "2.1.0+cu121",
+    "device": "cuda",
+    "strict_deterministic": false,
+    "smoke_test": false,
+    "n_train": 17084,
+    "n_val": 2146,
+    "n_test": 2158,
+    "finished_at": "2026-10-12 15:07:26"
+  }
+}
