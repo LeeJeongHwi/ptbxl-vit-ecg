@@ -11,7 +11,8 @@ Usage (from the repository root, virtual environment activated):
     python plot_noise_examples.py                       # record 0, lead II, 0 dB, first 5 s
     python plot_noise_examples.py --index 17 --snr-db 5 --t0 2 --dur 4
 
-Outputs: <out>.png and <out>.pdf (default results/noise_robustness/noise_examples_<SNR>dB.png)
+Outputs: <out>.png (600 dpi unless --dpi is given) and <out>.pdf
+         (default results/noise_robustness/noise_examples_<SNR>dB.png)
 """
 
 from __future__ import annotations
@@ -51,6 +52,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     ap.add_argument("--t0", type=float, default=0.0, help="window start (s)")
     ap.add_argument("--dur", type=float, default=5.0, help="window length (s)")
     ap.add_argument("--units", default="mV", help="y-axis unit label (the preprocessed signals are in mV)")
+    ap.add_argument("--dpi", type=int, default=600, help="resolution of the PNG")
     ap.add_argument("--out", type=Path, default=None)
     args = ap.parse_args(argv)
 
@@ -86,7 +88,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     t = np.arange(s0, s1) / fs
     ymax = max(np.abs(sig[s0:s1]).max() for _, sig, _ in rows) * 1.05
     n_rows = len(rows)
-    fig, axes = plt.subplots(n_rows, 1, figsize=(7.2, 1.05 * n_rows + 0.7), sharex=True, sharey=True, dpi=200)
+    fig, axes = plt.subplots(n_rows, 1, figsize=(7.2, 1.05 * n_rows + 0.7), sharex=True, sharey=True, dpi=args.dpi)
     for ax, (title, sig, snr_rec) in zip(np.atleast_1d(axes), rows):
         ax.plot(t, sig[s0:s1], color="#1f1f1e", linewidth=0.6)
         tag = title if snr_rec is None else f"{title}  —  SNR {args.snr_db:g} dB"
