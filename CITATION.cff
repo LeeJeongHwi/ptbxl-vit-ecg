@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code, please cite it as below."
 type: software
 title: "ptbxl-vit-ecg: Explainable Vision Transformer for multi-label 12-lead ECG classification"
-version: 1.0.0
+version: 1.0.2
 date-released: 2026-10-27
 license: MIT
 repository-code: "https://github.com/<account>/ptbxl-vit-ecg"
@@ -35,3 +35,24 @@ preferred-citation:
   journal: "Scientific Reports"
   year: 2026
   notes: "under review"
+references:
+  - type: data
+    title: "PTB-XL, a large publicly available electrocardiography dataset"
+    version: 1.0.3
+    year: 2022
+    doi: 10.13026/kfzx-aw45
+    url: "https://physionet.org/content/ptb-xl/1.0.3/"
+    license: CC-BY-4.0
+    publisher:
+      name: PhysioNet
+    authors:
+      - family-names: Wagner
+        given-names: Patrick
+      - family-names: Strodthoff
+        given-names: Nils
+      - family-names: Bousseljot
+        given-names: Ralf-Dieter
+      - family-names: Samek
+        given-names: Wojciech
+      - family-names: Schaeffter
+        given-names: Tobias

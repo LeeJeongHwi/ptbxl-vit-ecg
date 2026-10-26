@@ -51,7 +51,9 @@ falls back to a simple SciPy peak detector when it is not installed (the figures
 
 Download PTB-XL 1.0.3 from PhysioNet (https://physionet.org/content/ptb-xl/1.0.3/) and place it in
 `ptb_xl_dataset/` so that `ptb_xl_dataset/ptbxl_database.csv`, `ptb_xl_dataset/scp_statements.csv`
-and `ptb_xl_dataset/records500/` exist. The 500 Hz records are used.
+and `ptb_xl_dataset/records500/` exist. The 500 Hz records are used. PTB-XL is not included in this
+repository; it is licensed under the Creative Commons Attribution 4.0 International license
+(CC BY 4.0) by its authors (see [License](#license)).
 
 The first script that needs the data builds a cache of preprocessed arrays in `npy_data/`
 (`x_train.npy`, ..., `y_test.npy`): records are read with `wfdb`, the baseline is estimated per lead
@@ -122,5 +124,25 @@ See `CITATION.cff`.
 
 ## License
 
-MIT, see `LICENSE`. PTB-XL is distributed by PhysioNet under its own license (Creative Commons
-Attribution 4.0).
+The code in this repository and the result files in `results/` are released under the MIT license,
+see `LICENSE`.
+
+The PTB-XL dataset is not part of this repository and is not covered by the MIT license. It is
+distributed by PhysioNet under the Creative Commons Attribution 4.0 International license
+(CC BY 4.0, https://creativecommons.org/licenses/by/4.0/). Anyone who downloads PTB-XL to run this
+code must comply with that license. If you redistribute the data or material derived from it (for
+example the preprocessed arrays in `npy_data/`, trained checkpoints or figures showing PTB-XL
+records), give appropriate credit, link to the license and indicate whether changes were made. The
+preprocessing described in [Data](#data) (baseline removal, low-pass filtering, removal of records
+without a diagnostic superclass label) is such a change. Please cite the dataset as
+
+> P. Wagner, N. Strodthoff, R.-D. Bousseljot, D. Kreiseler, F. I. Lunze, W. Samek and T. Schaeffter,
+> "PTB-XL, a large publicly available electrocardiography dataset," *Scientific Data*, vol. 7,
+> p. 154, 2020. https://doi.org/10.1038/s41597-020-0495-6
+
+> P. Wagner, N. Strodthoff, R.-D. Bousseljot, W. Samek and T. Schaeffter, "PTB-XL, a large publicly
+> available electrocardiography dataset" (version 1.0.3), PhysioNet, 2022.
+> https://doi.org/10.13026/kfzx-aw45
+
+> A. L. Goldberger et al., "PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research
+> resource for complex physiologic signals," *Circulation*, vol. 101, no. 23, pp. e215-e220, 2000.
