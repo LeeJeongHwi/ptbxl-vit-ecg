@@ -5,7 +5,7 @@ title: "ptbxl-vit-ecg: Explainable Vision Transformer for multi-label 12-lead EC
 version: 1.0.2
 date-released: 2026-10-27
 license: MIT
-repository-code: "https://github.com/<account>/ptbxl-vit-ecg"
+repository-code: "https://github.com/LeeJeongHwi/ptbxl-vit-ecg"
 authors:
   - family-names: Oh
     given-names: SeungJun
